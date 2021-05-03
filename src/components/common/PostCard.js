@@ -18,7 +18,7 @@ const FeaturedIndicator = <div css={css`
     font-size: 75%;
 `}>
     {
-        (()=>{
+        (() => {
             switch (process.env.GATSBY_TARGET_LANG) {
                 default:
                     return "Featured";
@@ -37,10 +37,10 @@ const FeaturedIndicator = <div css={css`
 
 const PostCard = ({ post }) => {
     const url = `/${post.frontmatter.url}/`
-    
+
     generateDescription(post);
 
-	let title = post.frontmatter.title,
+    let title = post.frontmatter.title,
         description = post.frontmatter.description;
 
     if (process.env.GATSBY_TARGET_LANG) {
@@ -70,7 +70,7 @@ const PostCard = ({ post }) => {
             `}>
                 {featuredimage &&
                     <Link to={url}><div css={css`
-                        padding: 30% 50%;
+                        padding: 26.5% 50%;
                         background: var(--color-primary) no-repeat center center;
                         box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.1);
                         border-radius: 20px;
